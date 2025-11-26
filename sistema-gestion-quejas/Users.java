@@ -15,7 +15,6 @@ public class Users {
         this.role = role;
     }
 
-    
     public String getId() {
         return id;
     }
@@ -27,11 +26,11 @@ public class Users {
     public String getLastName() {
         return lastName;
     }
-    
+
     public String getUsername() {
         return username;
     }
-    
+
     public String getPassword() {
         return password;
     }
@@ -63,7 +62,7 @@ public class Users {
     public void setRole(String role) {
         this.role = role;
     }
-    
+
     public boolean login(String username, String password) {
         return this.username.equals(username) && this.password.equals(password);
     }

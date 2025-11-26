@@ -8,7 +8,6 @@ public class AppController {
         Login login = new Login();
         Ticketsystem system = new Ticketsystem(login);
 
-        // ---- Example users ----
         login.addUser(new Admin("A1", "Jose", "Profe", "admin", "1234"));
 
         Tech t1 = new Tech("T1", "Jheisson", "Passos", "tech1", "1111", "Maintenance");
@@ -37,7 +36,6 @@ public class AppController {
 
             System.out.println("\nWelcome " + u.getName() + " (" + u.getRole() + ")");
 
-            // ----------- ADMIN -----------
             if (u.getRole().equals("ADMIN")) {
                 int option = -1;
                 do {
@@ -78,7 +76,6 @@ public class AppController {
                 } while (option != 3);
             }
 
-            // ----------- TECHNICIAN -----------
             else if (u.getRole().equals("TECH")) {
 
                 Tech tech = (Tech) u;
@@ -133,7 +130,6 @@ public class AppController {
                 } while (option != 3);
             }
 
-            // ----------- GUEST -----------
             else if (u.getRole().equals("GUEST")) {
 
                 Guest g = (Guest) u;
